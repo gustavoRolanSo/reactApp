@@ -1,15 +1,15 @@
 sudo: false
 
-services: 
+services:
   - docker
 
-before_install: 
+before_install:
   - docker build -t gustavo/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true gustavo/docker-react npm run test -- --coverage
 
-deploy: 
+deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "tryout"
