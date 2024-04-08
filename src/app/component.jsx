@@ -4,7 +4,7 @@ const Component = () => {
   return (
     <>
       <p>
-        oi
+        hello aws
       </p>
     </>
   )
